@@ -1,0 +1,1 @@
+export default (values: Array<number>): number => values.reduce((acc, val) => (acc + val), 0);

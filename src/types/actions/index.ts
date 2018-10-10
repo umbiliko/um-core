@@ -1,3 +1,4 @@
+import Concat from './Concat';
 import Clear from './Clear';
 import Decrement from './Decrement';
 import Delete from './Delete';
@@ -10,6 +11,7 @@ import Unshift from './Unshift';
 import Update from './Update';
 
 type actions = {
+    CONCAT: Concat;
     CLEAR: Clear;
     DECREMENT: Decrement;
     DELETE: Delete;

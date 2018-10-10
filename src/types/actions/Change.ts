@@ -1,8 +1,7 @@
 import Path from '../Path';
 
-type Change<Payload = undefined> = {
+type Change = {
     path: Path;
-    payload: Payload;
 };
 
 export default Change;

@@ -1,6 +1,7 @@
-import { CLEAR, DECREMENT, DELETE, INCREMENT, INSERT, PATCH, REMOVE, SHIFT, UNSHIFT, UPDATE } from '../actions/types';
+import { CONCAT, CLEAR, DECREMENT, DELETE, INCREMENT, INSERT, PATCH, REMOVE, SHIFT, UNSHIFT, UPDATE } from '../actions/types';
 import actions from '../types/actions';
 import State from '../types/State';
+import $concat from './concat';
 import $clear from './clear';
 import $decrement from './decrement';
 import $delete from './delete';
@@ -18,6 +19,9 @@ export default (state: State, action: actions[keyof actions]): State => {
 
     switch (action.type) {
 
+        case CONCAT:
+            return $concat(path, state, action.payload);
+
         case CLEAR:
             return $clear(path, state);
 
@@ -28,10 +32,10 @@ export default (state: State, action: actions[keyof actions]): State => {
             return $delete(path, state);
 
         case INCREMENT:
-            return $increment(path, state);
+            return $increment(path, state, action.amount);
 
         case INSERT:
-            return $insert(path, state, action);
+            return $insert(path, state, action.payload);
 
         case PATCH:
             return $patch(path, state, action.payload);

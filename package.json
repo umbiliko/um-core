@@ -1,35 +1,50 @@
 {
   "name": "um-core",
   "version": "0.1.0",
-  "description": "Umbiliko core actions and reducers library",
-  "main": "lib/index.js",
-  "private": true,
+  "description": "Umbiliko core actions and reducers",
+  "main": "build/dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/umbiliko/um-core.git"
+  },
+  "keywords": [],
+  "author": "Lucas M. Oromi <lucas.oromi@gmail.com>",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/umbiliko/um-core/issues"
+  },
+  "homepage": "https://github.com/umbiliko/um-core#readme",
   "dependencies": {
     "immutable": "^3.8.2",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "react-scripts-ts": "3.1.0",
-    "redux": "^4.0.0"
+    "lodash": "^4.17.11",
+    "redux": "^4.0.0",
+    "reselect": "^4.0.0"
   },
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
+    "start": "start-storybook -p 6006",
+    "build": "tsc",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.5",
-    "@types/node": "^10.11.7",
-    "@types/react": "^16.4.16",
-    "@types/react-dom": "^16.0.9",
-    "typescript": "^3.1.2",
-    "@storybook/react": "^3.4.11",
     "@storybook/addon-actions": "^3.4.11",
     "@storybook/addon-links": "^3.4.11",
     "@storybook/addons": "^3.4.11",
+    "@storybook/react": "^3.4.11",
+    "@types/jest": "^23.3.5",
+    "@types/lodash": "^4.14.117",
+    "@types/node": "^10.11.7",
+    "@types/react": "^16.4.16",
+    "@types/react-dom": "^16.0.9",
+    "@types/reselect": "^2.2.0",
     "babel-core": "^6.26.3",
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-scripts-ts": "3.1.0",
+    "typescript": "^3.1.2"
   }
 }

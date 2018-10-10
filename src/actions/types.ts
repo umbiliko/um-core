@@ -1,6 +1,7 @@
+export const CLEAR = 'CLEAR'; // Array | Object
+export const CONCAT = 'CONCAT'; // Array
 export const DECREMENT = 'DECREMENT'; // number
 export const DELETE = 'DELETE'; // Object
-export const CLEAR = 'CLEAR'; // Array | Object
 export const INCREMENT = 'INCREMENT'; // number
 export const INSERT = 'INSERT'; // Array
 export const PATCH = 'PATCH'; // Object

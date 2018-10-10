@@ -1,8 +1,9 @@
 import { INSERT } from 'src/actions/types';
 import Change from './Change';
 
-type Insert<T = any> = Change<T> & {
+type Insert<Payload = any> = Change & {
     at?: number;
+    payload: Payload;
     type: typeof INSERT;
 };
 
