@@ -14,6 +14,7 @@ You can wrap a Promise into an Observable with Observable.from(promise)
 
 Here's an example where I fetch for a user, request the JSON response, then wrap the promise in an observable:
 
+```js
 const api = {
   fetchUser: id => {
     const request = fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
@@ -29,6 +30,8 @@ const fetchUserEpic = action$ =>
       api.fetchUser(action.payload) // This returns our Observable wrapping the Promise
         .map(payload => ({ type: FETCH_USER_FULFILLED, payload }))
     );
+```
+
 Here's a JSBin with this working example: https://jsbin.com/fuwaguk/edit?js,output
 
 If you have control over the API code, ideally you would use Observable.ajax (or any other Observable-based AJAX utils) because Promises cannot be cancelled.
