@@ -1,0 +1,3 @@
+import State from '../types/State';
+declare const _default: (state: State, action: import("../types/actions/Concat").default | import("../types/actions/Clear").default | import("../types/actions/Decrement").default | import("../types/actions/Delete").default | import("../types/actions/Increment").default | import("../types/actions/Insert").default<any> | import("../types/actions/Patch").default<any> | import("../types/actions/Remove").default | import("../types/actions/Shift").default | import("../types/actions/Unshift").default | import("../types/actions/Update").default<any>) => State;
+export default _default;

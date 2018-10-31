@@ -1,0 +1,11 @@
+export declare const CLEAR = "CLEAR";
+export declare const CONCAT = "CONCAT";
+export declare const DECREMENT = "DECREMENT";
+export declare const DELETE = "DELETE";
+export declare const INCREMENT = "INCREMENT";
+export declare const INSERT = "INSERT";
+export declare const PATCH = "PATCH";
+export declare const REMOVE = "REMOVE";
+export declare const SHIFT = "SHIFT";
+export declare const UNSHIFT = "UNSHIFT";
+export declare const UPDATE = "UPDATE";

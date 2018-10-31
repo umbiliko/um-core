@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
-    "outDir": "build/dist",
-    "module": "esnext",
+    "outDir": "dist",
+    "module": "commonjs",
     "target": "es5",
-    "lib": ["es6", "dom"],
+    "lib": ["es2017", "es7", "es6", "dom"],
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
     "sourceMap": true,
-    "allowJs": true,
-    "jsx": "react",
     "moduleResolution": "node",
     "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
@@ -21,12 +22,11 @@
   },
   "exclude": [
     "node_modules",
-    "build",
     "scripts",
-    "acceptance-tests",
     "webpack",
     "jest",
-    "src/setupTests.ts",
-    "stories"
+    "stories",
+    "config",
+    "dist"
   ]
 }
