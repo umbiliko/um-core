@@ -18,6 +18,7 @@
   "dependencies": {
     "immutable": "^3.8.2",
     "lodash": "^4.17.11",
+    "ntt-view": "0.0.1",
     "redux": "^4.0.0",
     "redux-immutable": "^4.0.0",
     "redux-observable": "^1.0.0",
