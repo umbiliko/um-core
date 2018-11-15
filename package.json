@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/umbiliko/um-core#readme",
   "dependencies": {
+    "abort-controller": "^1.0.2",
     "immutable": "^3.8.2",
     "lodash": "^4.17.11",
     "ntt-view": "0.0.1",
@@ -23,7 +24,8 @@
     "redux-immutable": "^4.0.0",
     "redux-observable": "^1.0.0",
     "reselect": "^4.0.0",
-    "rxjs": "^6.3.3"
+    "rxjs": "^6.3.3",
+    "simple-cache-provider": "^0.10.0"
   },
   "scripts": {
     "start": "start-storybook -p 6006",
