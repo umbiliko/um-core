@@ -1,4 +1,4 @@
-import { ImmutableModel } from './ImmutableModel';
+import { StateModel } from './ImmutableModel';
 import { Element } from 'ntt-view';
 import { ReactNode } from 'react';
 
@@ -34,7 +34,7 @@ export interface ViewState extends FlatObject {
     theme: string;
 }
 
-export interface ViewModel extends ViewConfig, ImmutableModel<ViewState> {
+export interface ViewModel extends ViewConfig, StateModel<ViewState> {
     render: (element: Element) => ReactNode;
     setTheme: (theme: string) => void;
 }

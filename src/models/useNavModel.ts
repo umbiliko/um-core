@@ -6,5 +6,5 @@ export const useNavModel = (): NavModel => {
     if (!useContext) {
         throw new Error('React >= 16.3 required');
     }
-    return useContext(NavContext)
-}
+    return useContext(NavContext);
+};

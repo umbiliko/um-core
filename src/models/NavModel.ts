@@ -1,4 +1,4 @@
-import { ImmutableModel } from './ImmutableModel';
+import { StateModel } from './ImmutableModel';
 
 export interface NavState extends FlatObject {
     key?: string;
@@ -7,7 +7,7 @@ export interface NavState extends FlatObject {
     search: string;
 }
 
-export interface NavModel extends ImmutableModel<NavState> {
+export interface NavModel extends StateModel<NavState> {
     push(path: string, state?: NavState): void;
     push(location: Partial<NavState>): void;
     replace(path: string, state?: NavState): void;
