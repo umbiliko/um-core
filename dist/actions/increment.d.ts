@@ -1,2 +1,2 @@
-declare const _default: (path: (string | number)[], amount?: number | undefined) => import("../types/actions/Increment").default;
+declare const _default: (path: (string | number)[], amount?: number | undefined) => any;
 export default _default;

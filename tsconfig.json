@@ -21,6 +21,7 @@
     "noUnusedLocals": true
   },
   "exclude": [
+    "bak",
     "node_modules",
     "scripts",
     "webpack",
@@ -28,5 +29,10 @@
     "stories",
     "config",
     "dist"
+  ],
+  "typeRoots": [
+    "../typings",
+    "./node_modules/@types/",
+    "../node_modules/@types/"
   ]
 }

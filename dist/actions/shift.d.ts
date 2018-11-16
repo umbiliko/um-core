@@ -1,2 +1,2 @@
-declare const _default: (path: (string | number)[]) => import("../types/actions/Shift").default;
+declare const _default: (path: (string | number)[]) => any;
 export default _default;
