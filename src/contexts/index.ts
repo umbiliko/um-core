@@ -1,4 +1,3 @@
-import { initContext } from './initContext';
+export { AppContext } from './AppContext';
 export { NavContext } from './NavContext';
-
-export const AppContext = initContext();
+export { ViewContext } from './ViewContext';
