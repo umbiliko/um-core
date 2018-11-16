@@ -1,5 +1,4 @@
-import { Context } from 'react';
-import { initContext } from './initContext';
-import { NavModel, NavState } from '../models/NavModel';
+import { Context, createContext } from 'react';
+import { NavModel } from '../models/NavModel';
 
-export const NavContext: Context<NavModel> = initContext<NavState, NavModel>();
+export const NavContext: Context<NavModel> = createContext<NavModel>({} as NavModel);

@@ -1,3 +1,3 @@
-import { initContext } from './initContext';
+import { Context, createContext } from 'react';
 
-export const AppContext = initContext();
+export const AppContext: Context<FlatObject> = createContext<FlatObject>({});

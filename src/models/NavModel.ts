@@ -1,4 +1,4 @@
-import { StateModel } from './ImmutableModel';
+import { StateModel } from './StateModel';
 
 export interface NavState extends FlatObject {
     key?: string;

@@ -1,8 +1,8 @@
 import { fromJS } from 'immutable';
-import { Context, createContext, ReactNode } from 'react';
 import { Element } from 'ntt-view';
-import { ViewConfig, ViewModel, ViewState } from '../models/ViewModel';
+import { Context, createContext, ReactNode } from 'react';
 import { NotImplemented } from '../components';
+import { ViewConfig, ViewModel, ViewState } from '../models/ViewModel';
 
 const config: ViewConfig = {
     AppBar: NotImplemented,

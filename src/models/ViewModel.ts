@@ -1,6 +1,6 @@
-import { StateModel } from './ImmutableModel';
 import { Element } from 'ntt-view';
 import { ReactNode } from 'react';
+import { StateModel } from './StateModel';
 
 export interface ViewConfig {
     AppBar: (props: any) => ReactNode;
