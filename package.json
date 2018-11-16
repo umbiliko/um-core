@@ -1,8 +1,7 @@
 {
   "name": "um-react-core",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Core implmenentation of user modules",
-  "main": "dist/index.js",
   "main": "dist/index.js",
   "types": [
     "dist/index.d.ts"
