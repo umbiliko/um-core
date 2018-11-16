@@ -1,3 +1,0 @@
-import { State } from 'src/typings';
-declare const _default: (state: State, action: import("../../typings/actions/Concat").default | import("../../typings/actions/Clear").default | import("../../typings/actions/Decrement").default | import("../../typings/actions/Delete").default | import("../../typings/actions/Increment").default | import("../../typings/actions/Insert").default<any> | import("../../typings/actions/Patch").default<any> | import("../../typings/actions/Remove").default | import("../../typings/actions/Shift").default | import("../../typings/actions/Unshift").default | import("../../typings/actions/Update").default<any>) => State;
-export default _default;

@@ -1,15 +1,16 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "dist",
-    "module": "commonjs",
+    "module": "amd",
     "target": "es5",
-    "lib": ["es2017", "es7", "es6", "dom"],
     "declaration": true,
+    "outDir": "dist",
+    // "outFile": "dist/index.js",
     "strict": true,
-    "esModuleInterop": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
     "sourceMap": true,
-    "moduleResolution": "node",
+    "jsx": "react",
+    "lib": ["esnext", "dom"],
     "rootDir": "src",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
@@ -18,19 +19,22 @@
     "importHelpers": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "moduleResolution": "node"
   },
   "exclude": [
     "bak",
     "node_modules",
+    "**/*.spec.ts",
+    "dist",
     "scripts",
+    "acceptance-tests",
     "webpack",
     "jest",
-    "stories",
-    "config",
-    "dist"
+    "src/setupTests.ts"
   ],
-  "typeRoots": [
+  "typeRoots" : [
+    "./typings",
     "../typings",
     "./node_modules/@types/",
     "../node_modules/@types/"
