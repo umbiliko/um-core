@@ -1,6 +1,6 @@
 import { Map } from 'immutable';
 
 export interface ImmutableModel<S extends FlatObject = FlatObject> {
-    setState: <S, K>(key: keyof S, value: string) => void;
+    setState: (key: keyof S, value: ValueType | null) => void;
     state: Map<keyof S, string>;
 }

@@ -34,8 +34,7 @@ export interface ViewState extends FlatObject {
     theme: string;
 }
 
-export interface ViewModel extends ImmutableModel<ViewState> {
-    config: ViewConfig;
+export interface ViewModel extends ViewConfig, ImmutableModel<ViewState> {
     render: (element: Element) => ReactNode;
     setTheme: (theme: string) => void;
 }
