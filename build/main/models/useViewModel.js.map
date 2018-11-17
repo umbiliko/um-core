@@ -1,0 +1,1 @@
+{"version":3,"file":"useViewModel.js","sourceRoot":"","sources":["../../../src/models/useViewModel.ts"],"names":[],"mappings":";;AAAA,+BAAmC;AACnC,wCAA0C;AAG7B,QAAA,YAAY,GAAG;IACxB,IAAI,CAAC,kBAAU,EAAE;QACb,MAAM,IAAI,KAAK,CAAC,wBAAwB,CAAC,CAAC;KAC7C;IACD,OAAO,kBAAU,CAAC,sBAAW,CAAC,CAAC;AACnC,CAAC,CAAC"}

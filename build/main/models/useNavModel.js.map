@@ -1,0 +1,1 @@
+{"version":3,"file":"useNavModel.js","sourceRoot":"","sources":["../../../src/models/useNavModel.ts"],"names":[],"mappings":";;AAAA,+BAAmC;AACnC,wCAAyC;AAG5B,QAAA,WAAW,GAAG;IACvB,IAAI,CAAC,kBAAU,EAAE;QACb,MAAM,IAAI,KAAK,CAAC,wBAAwB,CAAC,CAAC;KAC7C;IACD,OAAO,kBAAU,CAAC,qBAAU,CAAC,CAAC;AAClC,CAAC,CAAC"}

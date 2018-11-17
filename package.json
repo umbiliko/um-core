@@ -2,14 +2,9 @@
   "name": "um-react-core",
   "version": "0.0.12",
   "description": "Core implmenentation of user modules",
-  "main": "dist/index.js",
-  "types": [
-    "dist/index.d.ts"
-  ],
-  "files": [
-    "dist",
-    "typings"
-  ],
+  "main": "build/main/index.js",
+  "module": "build/module/index.js",
+  "typings": "build/main/index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/umbiliko/um-react-core.git"
@@ -30,11 +25,21 @@
     "react-cache": "^2.0.0-alpha.1"
   },
   "scripts": {
+    "build": "npm run build:main && npm run build:module",
+    "build:all": "npm-run-all copy:css-to-lib build:ts",
+    "build:main": "npm run clean:main && tsc -p tsconfig.json",
+    "build:module": "npm run clean:module && tsc -p tsconfig.module.json",
+    "build:storybook": "build-storybook",
+    "build:ts": "tsc",
+    "clean": "rimraf ./build/",
+    "clean:main": "rimraf ./build/main/",
+    "clean:module": "rimraf ./build/module/",
+    "compile": "tsc -p .",
+    "patch": "npm run build && npm run path:git && npm version patch && npm publish",
+    "patch:git": "git add . && git commit -m 'patch'",
     "start": "start-storybook -p 6006",
-    "build": "tsc",
-    "test": "node scripts/test.js --env=jsdom",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.2",

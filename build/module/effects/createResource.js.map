@@ -1,0 +1,1 @@
+{"version":3,"file":"createResource.js","sourceRoot":"","sources":["../../../src/effects/createResource.ts"],"names":[],"mappings":"AAAA,OAAO,EACH,uBAAuB,EAE1B,MAAM,aAAa,CAAC;AAErB,IAAI,cAA8B,CAAC;AAEnC,IAAI,uBAAuB,EAAE;IACzB,cAAc,GAAG,uBAAuB,CAAC;CAC5C;AAED,OAAO,EAAE,cAAc,EAAE,CAAC"}

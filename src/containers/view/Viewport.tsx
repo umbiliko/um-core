@@ -2,8 +2,8 @@ import * as React from 'react';
 import { ReactNode, useState } from 'react';
 import { fromJS, Map } from 'immutable';
 import { Element } from 'ntt-view';
-import { ViewContext } from '../contexts';
-import { ViewConfig, ViewModel, ViewState } from '../models';
+import { ViewContext } from '../../contexts/index';
+import { ViewConfig, ViewModel, ViewState } from '../../models/index';
 
 interface ViewportProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     config: ViewConfig;
@@ -32,7 +32,7 @@ export const Viewport: React.FC<ViewportProps> = ({ children, config, ...props }
     };
 
     return (
-        <div className="ViewModel" {...props}>
+        <div className="Viewport" {...props}>
             <ViewContext.Provider value={model}>
                 {children}
             </ViewContext.Provider>
