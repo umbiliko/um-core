@@ -2,16 +2,16 @@ import { Map } from 'immutable';
 import { useEffect, useState} from 'react';
 import { AppModel } from './AppModel';
 
-const DO_SOMETHING = 'DO_SOMETHING';
+export const DO_SOMETHING = 'DO_SOMETHING';
 
-interface AppActionTypes {
+export interface AppActionTypes {
     DO_SOMETHING: {
         type: typeof DO_SOMETHING;
         value: string;
     }
 }
 
-type AppActionType = AppActionTypes[keyof  AppActionTypes];
+export type AppActionType = AppActionTypes[keyof  AppActionTypes];
 
 export const useAppModel = <S extends FlatObject, A extends AppActionType>(initialState: Map<keyof S, FlatArray | ValueType | null>): AppModel<S, A> => {
 
