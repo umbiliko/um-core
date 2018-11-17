@@ -8,9 +8,9 @@ export interface NavState extends FlatObject {
 }
 
 export interface NavModel extends StateModel<NavState> {
-    push(path: string, state?: NavState): void;
+    // push(path: string, state?: NavState): void;
     push(location: Partial<NavState>): void;
-    replace(path: string, state?: NavState): void;
+    // replace(path: string, state?: NavState): void;
     replace(location: Partial<NavState>): void;
     go(n: number): void;
     goBack(): void;
