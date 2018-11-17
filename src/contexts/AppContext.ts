@@ -1,5 +1,5 @@
 import { Context, createContext } from 'react';
-import { AppModel, AppActionType } from '../models';
+import { AppModel, AppState, AppAction } from '../models';
 
-export const AppContext: Context<AppModel<FlatObject, AppActionType>> =
-    createContext<AppModel<FlatObject, AppActionType>>({} as AppModel<FlatObject, AppActionType>);
+export const AppContext: Context<AppModel<AppState, AppAction>> =
+    createContext<AppModel<AppState, AppAction>>({} as AppModel<AppState, AppAction>);
