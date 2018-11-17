@@ -1,17 +1,7 @@
 import { useEffect, useState} from 'react';
-import { AppModel, AppState } from './AppModel';
+import { DO_SOMETHING } from './AppModel';
+import { AppAction, AppModel, AppState } from './AppModel';
 import { ContextState } from './ContextModel';
-
-export const DO_SOMETHING = 'DO_SOMETHING';
-
-export interface AppActions {
-    DO_SOMETHING: {
-        type: typeof DO_SOMETHING;
-        value: string;
-    }
-}
-
-export type AppAction = AppActions[keyof  AppActions];
 
 export const useAppModel = <S extends AppState, A extends AppAction>(initialState: ContextState<S>): AppModel<S, A> => {
 
