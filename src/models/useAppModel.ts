@@ -1,15 +1,16 @@
 import { useEffect, useState} from 'react';
-import { DO_SOMETHING } from './AppModel';
+import { DO_ANOTHER, DO_SOMETHING } from './AppModel';
 import { AppAction, AppModel, AppState } from './AppModel';
 import { ContextState } from './ContextModel';
 
-export const useAppModel = <S extends AppState, A extends AppAction>(initialState: ContextState<S>): AppModel<S, A> => {
+export const useAppModel = (initialState: ContextState<AppState>): AppModel => {
 
-    const [state, setState] = useState<ContextState<S>>(initialState);
+    const [state, setState] = useState<ContextState<AppState>>(initialState);
 
-    const reduce = (action: AppAction): ContextState<S> => {
+    const reduce = (action: AppAction): ContextState<AppState> => {
         switch (action.type) {
             case DO_SOMETHING: return state.set('something', action.value);
+            case DO_ANOTHER: return state.set('another', action.amount);
         }
         return state;
     };
@@ -24,7 +25,7 @@ export const useAppModel = <S extends AppState, A extends AppAction>(initialStat
         []
     );
 
-    const model: AppModel<S, A> = {
+    const model: AppModel = {
         dispatch,
         doSomething,
         setState,
