@@ -1,4 +1,4 @@
-import { StateModel } from './StateModel';
+import { ContextModel } from './ContextModel';
 
 export interface NavState extends FlatObject {
     key?: string;
@@ -7,7 +7,7 @@ export interface NavState extends FlatObject {
     search: string;
 }
 
-export interface NavModel extends StateModel<NavState> {
+export interface NavModel extends ContextModel<NavState> {
     // push(path: string, state?: NavState): void;
     push(location: Partial<NavState>): void;
     // replace(path: string, state?: NavState): void;

@@ -1,6 +1,6 @@
-import { Map } from 'immutable';
 import { useEffect, useState} from 'react';
 import { AppModel } from './AppModel';
+import { ContextState } from './ContextModel';
 
 export const DO_SOMETHING = 'DO_SOMETHING';
 
@@ -11,13 +11,17 @@ export interface AppActionTypes {
     }
 }
 
+export interface AppState {
+    something: string;
+}
+
 export type AppActionType = AppActionTypes[keyof  AppActionTypes];
 
-export const useAppModel = <S extends FlatObject, A extends AppActionType>(initialState: Map<keyof S, FlatArray | ValueType | null>): AppModel<S, A> => {
+export const useAppModel = <S extends AppState, A extends AppActionType>(initialState: ContextState<S>): AppModel<S, A> => {
 
-    const [state, setState] = useState<Map<keyof S, FlatArray | ValueType | null>>(initialState);
+    const [state, setState] = useState<ContextState<S>>(initialState);
 
-    const reduce = (action: AppActionType): Map<keyof S, FlatArray | ValueType | null> => {
+    const reduce = (action: AppActionType): ContextState<S> => {
         switch (action.type) {
             case DO_SOMETHING: return state.set('something', action.value);
         }

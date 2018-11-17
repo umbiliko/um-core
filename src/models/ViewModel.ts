@@ -1,6 +1,6 @@
 import { Element } from 'ntt-view';
 import { ReactNode } from 'react';
-import { StateModel } from './StateModel';
+import { ContextModel } from './ContextModel';
 
 export interface ViewConfig {
     AppBar: (props: any) => ReactNode;
@@ -34,7 +34,7 @@ export interface ViewState extends FlatObject {
     theme: string;
 }
 
-export interface ViewModel extends ViewConfig, StateModel<ViewState> {
+export interface ViewModel extends ViewConfig, ContextModel<ViewState> {
     render: (element: Element) => ReactNode;
     setTheme: (theme: string) => void;
 }

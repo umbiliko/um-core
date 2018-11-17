@@ -1,9 +1,9 @@
 import { Dispatch, SetStateAction } from 'react';
-import { Map } from 'immutable';
+import { ContextState } from './ContextModel';
 
-export interface AppModel<S extends FlatObject, A extends Action> {
+export interface AppModel<S, A extends Action> {
     dispatch: (action: A) => void;
     doSomething: () => void;
-    setState: Dispatch<SetStateAction<Map<keyof S, FlatArray | ValueType | null>>>;
-    state: Map<keyof S, FlatArray | ValueType | null>;
+    setState: Dispatch<SetStateAction<ContextState<S>>>;
+    state: ContextState<S>;
 }
