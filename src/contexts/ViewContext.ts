@@ -45,7 +45,7 @@ export const ViewContext: Context<ViewModel> = createContext<ViewModel>({
     ...config,
     render,
     setTheme: (theme: string) => {},
-    setState: (key: keyof ViewState, value: ValueType | null) => {},
+    setState: (key: keyof ViewState, value: FlatArray | ValueType | null) => {},
     state: fromJS({
         theme: 'light'
     })

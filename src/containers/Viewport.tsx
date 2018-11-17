@@ -2,15 +2,15 @@ import * as React from 'react';
 import { ReactNode, useState } from 'react';
 import { fromJS, Map } from 'immutable';
 import { Element } from 'ntt-view';
-import { ViewContext } from '../contexts/index';
-import { ViewConfig, ViewModel, ViewState } from '../models/ViewModel';
+import { ViewContext } from '../contexts';
+import { ViewConfig, ViewModel, ViewState } from '../models';
 
 interface ViewportProps extends React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
     config: ViewConfig;
 }
 
 export const Viewport: React.FC<ViewportProps> = ({ children, config, ...props }: ViewportProps) => {
-    const [state, setState] = useState<Map<keyof ViewState, ValueType | null>>(fromJS({
+    const [state, setState] = useState<Map<keyof ViewState, FlatArray | ValueType | null>>(fromJS({
         theme: 'light'
     }));
 
@@ -27,7 +27,7 @@ export const Viewport: React.FC<ViewportProps> = ({ children, config, ...props }
         ...config,
         render,
         setTheme: (theme: string) => setState(state.set('theme', theme)),
-        setState: (key: keyof ViewState, value: ValueType | null) => setState(state.set(key, value)),
+        setState: (key: keyof ViewState, value: FlatArray | ValueType | null) => setState(state.set(key, value)),
         state
     };
 
