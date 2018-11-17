@@ -1,10 +1,9 @@
 import { Dispatch, SetStateAction } from 'react';
 import { Map } from 'immutable';
-import { ShellState } from './useAppModel';
 
-export interface AppModel<S extends ShellState> {
-    dispatch: <A extends Action>(action: A) => void;
+export interface AppModel<S extends FlatObject, A extends Action> {
+    dispatch: (action: A) => void;
     doSomething: () => void;
-    setState: Dispatch<SetStateAction<S>>;
-    state: Map<keyof S, ValueType | null>;
+    setState: Dispatch<SetStateAction<Map<keyof S, FlatArray | ValueType | null>>>;
+    state: Map<keyof S, FlatArray | ValueType | null>;
 }

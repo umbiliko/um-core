@@ -1,11 +1,8 @@
 import { Map } from 'immutable';
-import { /*Dispatch, SetStateAction,*/ useEffect, useState} from 'react';
-// import { AppModel } from './AppModel';
+import { useEffect, useState} from 'react';
+import { AppModel } from './AppModel';
 
 const DO_SOMETHING = 'DO_SOMETHING';
-
-export interface ShellState extends FlatObject {
-}
 
 interface AppActionTypes {
     DO_SOMETHING: {
@@ -16,20 +13,20 @@ interface AppActionTypes {
 
 type AppActionType = AppActionTypes[keyof  AppActionTypes];
 
-export const useAppModel = <S extends ShellState>(initialState: Map<keyof S, ValueType | null>) => {
+export const useAppModel = <S extends FlatObject, A extends AppActionType>(initialState: Map<keyof S, FlatArray | ValueType | null>): AppModel<S, A> => {
 
-    const [state, setState] = useState<Map<keyof S, ValueType | null>>(initialState);
+    const [state, setState] = useState<Map<keyof S, FlatArray | ValueType | null>>(initialState);
 
-    const reduce = (action: AppActionType): Map<keyof S, ValueType | null> => {
+    const reduce = (action: AppActionType): Map<keyof S, FlatArray | ValueType | null> => {
         switch (action.type) {
             case DO_SOMETHING: return state.set('something', action.value);
         }
         return state;
     };
 
-    const dispatch = (action: AppActionType) => setState(reduce(action));
+    const dispatch = (action: AppActionType): void => { setState(reduce(action)) };
 
-    const doSomething = () => dispatch({ type: DO_SOMETHING, value: 'hello' });
+    const doSomething = () => dispatch({ type: DO_SOMETHING, value: 'hello' } );
 
     useEffect(
         () => {
@@ -37,7 +34,7 @@ export const useAppModel = <S extends ShellState>(initialState: Map<keyof S, Val
         []
     );
 
-    const model /*: AppModel<Map<keyof S, FlatArray | ValueType | null | undefined>>*/ = {
+    const model: AppModel<S, A> = {
         dispatch,
         doSomething,
         setState,
